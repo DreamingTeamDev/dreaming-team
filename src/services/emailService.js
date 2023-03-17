@@ -3,6 +3,7 @@ import axios from 'axios';
 const sendEmail = async (data) => {
   try {
     const response = await axios.post('https://m-ojdg.onrender.com/api/feedback', data);
+    // const response = await axios.post('http://localhost:5000/api/feedback', data);
     if (response.status !== 200) {
       throw new Error('Error in sending the email');
     }
